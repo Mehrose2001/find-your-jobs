@@ -4,9 +4,12 @@
   /* margin: 0 auto; */
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   background-color: #f4f4f4;
+}
+body{
+  background-color:#f4f4f4 ;
 }
 /* My Custom */
 .font-design {
@@ -54,6 +57,35 @@
   padding-left: 16px;
   padding-right: 16px;
   box-sizing: border-box;
+}
+.btn-catagory {
+  font-family: url("/public//fonts/NeueHaasDisplayBlack.ttf");
+  border: 1px solid var(--Color-Text-Text---Body, #737A91);
+  width: 119;
+  height: 30;
+  gap: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding-top: 8px;
+  padding-right: 15px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  border-color: #737A91;
+  color: #737A91;
+}
+.btn-link {
+  color: #0154AA;
+  background: transparent;
+  font-family: url("/public//fonts/NeueHaasDisplayBlack.ttf");
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-offset: 0%;
+  text-decoration-thickness: 0%;
 }
 .logo {
   height: 6em;

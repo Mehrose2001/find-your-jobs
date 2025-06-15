@@ -1,12 +1,13 @@
 import React from 'react';
+import JobCard from '../JobCard/JobCard';
 
-export default function HomePage({ jobs }) {
+export default function HomePage() {
   return (
-    <div className="flex p-4 bg-[#f4f4f4] l:w-[1380px] flex-col md:flex-row min-h-screen">
+    <div className="flex p-6 bg-[#f4f4f4] l:w-[1380px] flex-col md:flex-row min-h-screen">
       {/* Left Section - Job Profile Detail (30%) */}
-      <aside className="rounded-lg w-full h-[30%] md:w-1/3 lg:w-1/4 bg-white border-r border-gray-200">
+      <aside className="rounded-lg w-full h-[30%] md:w-1/3 lg:w-1/4 border-r border-gray-200">
         {/* <h2 className="text-xl font-semibold mb-4">Profile Details</h2> */}
-        <div className="space-y-2 align-center">
+        <div className="space-y-2 rounded-lg align-center bg-white">
           <img className='profile-bg w-[100%]' src="bgProfile.png" alt="na" />
           <img className='m-auto mt-[-48px]' src="profile.png" alt="na" />
           <div className='p-4'>
@@ -16,39 +17,76 @@ export default function HomePage({ jobs }) {
           </div>
           {/* Add more profile data here */}
         </div>
+        <div className="space-y-2 mt-4 p-6 rounded-lg align-center bg-white">
+          <div className='flex justify-between'>
+            <p style={{fontSize: "14px"}} className='text-lg text-left text-gray-800'> Profile Visitors </p>
+            <p style={{fontSize: "14px", color: "#0154AA"}} className='font-design'>140</p>
+          </div>
+          <div className='w-[100%] h-[2px] bg-[#E9ECEF]'></div>
+          <div className='flex justify-between'>
+            <p style={{fontSize: "14px"}} className='text-lg text-left text-gray-800'>Resume Viewers </p>
+            <p style={{fontSize: "14px", color: "#0154AA"}} className='font-design'>20</p>
+          </div>
+          <div className='w-[100%] h-[2px] bg-[#E9ECEF]'></div>
+          <div className='flex justify-between'>
+            <p style={{fontSize: "14px"}} className='text-lg text-left text-gray-800'>My Jobs</p>
+            <p style={{fontSize: "14px", color: "#0154AA"}} className='font-design'>88</p>
+          </div>
+        </div>
+        <div className="flex justify-between space-y-2 mt-4 px-6 py-3 rounded-lg items-center bg-white">
+          <div className='flex flex-col text-start align-left'>
+            <strong className='text-md text-gray-800'> My calendar </strong>
+            <p style={{fontSize: "14px"}} className='font-design'> Upcoming Interviews </p>
+          </div>
+          <img className='w-[10px] h-[8px]' src="arrow-down.png" alt="no" />
+        </div>
       </aside>
 
       {/* Right Section - Job Listings (70%) */}
       <main className="w-full md:w-2/3 lg:w-3/4 p-4 ">
-        <h2 className="text-xl font-semibold mb-4">Available Jobs</h2>
+        <header className='flex'>
+          <strong style={{fontSize: "22px", color: "black"}} className='font-design'>Find Your Dream Job,</strong>
+          <strong style={{fontSize: "22px", color: "#0154AA"}} className='font-design'>Albert</strong>
+        </header>
+        <p className='text-left'>Explore the latest job openings and apply for the best opportunities available today!</p>
 
-        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {jobs.map((job, index) => (
-            <div key={index} className="flex flex-col justify-start p-4 bg-white shadow rounded-2xl">
-              <strong className="ml-4 text-left text-sm text-gray-800">Promoted</strong>
-              <div className='flex align-text'>
-                  <img className='ml-4 mt-2' width={50} height={40} src="teams.png" alt="no" />
-                  <p className="ml-4 text-lg text-left text-gray-800">{job.title}</p>
-              </div>
-              <div className='mt-2 flex items-center justify-start'>
-                <img className='ml-6' src="location-icon.png" alt="na" />
-                <p style={{fontSize: "12px"}} className='ml-4 font-design'>{job.location}</p>
-              </div>
-              <div className='mt-2 flex items-center'>
-                <img className='ml-6' src="duration-icon.png" alt="na" />
-                <p style={{fontSize: "12px"}} className='ml-4 font-design'>{job.time}</p>
-                <p style={{fontSize: "12px"}} className='ml-4 font-design'>|</p>
-                <p style={{fontSize: "12px", color: "#0154AA"}} className='ml-4 font-design'>{job.applicants}</p>
-              </div>
-              <div className='mt-4 items-center flex justify-between'>
-                <button className=" py-2 bg-blue-600 text-white rounded hover:bg-blue-700 build-resume">
-                  Apply Now
-                </button>
-                <img className='h-[33px] w-[max content]' src="Vector.png" alt="no" />
-              </div>
+        <div className="rounded-2xl my-4 p-4 bg-white flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <input
+            className="transparent w-full md:w-[40%] p-2 rounded"
+            placeholder="Job Title, Company, or Keywords"
+            type="text"
+          />
+
+          <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-auto gap-4">
+            <div className="hidden md:block w-[2px] h-[25px] bg-[#E9ECEF]"></div>
+
+            <div className="flex items-center">
+              <p className="mr-2 font-design">Select Location</p>
+              <img className="mr-4" src="arrow-down.png" alt="na" />
             </div>
-          ))}
+
+            <div className="hidden md:block w-[2px] h-[25px] bg-[#E9ECEF]"></div>
+
+            <div className="flex items-center">
+              <p className="mr-2 font-design">Job Type</p>
+              <img className="mr-4" src="arrow-down.png" alt="na" />
+            </div>
+
+            <button className="py-2 bg-blue-600 text-white rounded build-resume hover:bg-white">
+              Search
+            </button>
+          </div>
         </div>
+        <div className="flex flex-wrap items-center gap-2 my-6">
+          <p className="font-design mr-2">Similar:</p>
+          <button className="btn-catagory">Frontend</button>
+          <button className="btn-catagory">Backend</button>
+          <button className="btn-catagory">Graphic design</button>
+        </div>
+
+        <JobCard promotion = {true} title = {"Feature Jobs"} catagoryLink = {"See Featured Jobs"}  />
+        <JobCard promotion = {false} title = {"Recommended Jobs"} catagoryLink = {"See Recommended Jobs"}  />
+        <JobCard promotion = {false} title = {"Latest Jobs"} catagoryLink = {"See Latest Jobs"}  />
       </main>
     </div>
   );
