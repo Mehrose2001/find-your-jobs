@@ -22,13 +22,13 @@ body{
 }
 .build-resume {
     margin-left: 20px;
-    width: 147;
+    /* width: 147; */
     height: 39;
     gap: 10px;
     border-radius: 8px;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-right: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     padding-left: 20px;
     background: #0154AA;
     color: white;
@@ -61,15 +61,15 @@ body{
 .btn-catagory {
   font-family: url("/public//fonts/NeueHaasDisplayBlack.ttf");
   border: 1px solid var(--Color-Text-Text---Body, #737A91);
-  width: 119;
+  /* width: 119; */
   height: 30;
   gap: 10px;
   margin-left: 10px;
   border-radius: 5px;
   border-width: 1px;
-  padding-top: 8px;
+  padding-top: 3px;
   padding-right: 15px;
-  padding-bottom: 8px;
+  padding-bottom: 3px;
   padding-left: 15px;
   border-color: #737A91;
   color: #737A91;
