@@ -41,6 +41,14 @@ body{
   line-height: 100%;
   letter-spacing: 0%;
 }
+.searchJob::placeholder{
+  font-family: url("/public//fonts/NeueHaasDisplayBlack.ttf");
+  font-weight: 500;
+  color: #737A91;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
 .profile-bg{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;

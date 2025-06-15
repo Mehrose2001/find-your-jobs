@@ -59,31 +59,12 @@ export default function HomePage() {
 
         <div className="rounded-2xl my-4 p-4 bg-white flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <input
-            className="transparent w-full md:w-[40%] p-2 rounded"
+            className="searchJob transparent w-full md:w-[40%] p-2 rounded"
             placeholder="Job Title, Company, or Keywords"
             type="text"
           />
 
-          {/* <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-auto gap-4">
-            <div className="hidden md:block w-[2px] h-[25px] bg-[#E9ECEF]"></div>
-
-            <div className="flex items-center">
-              <p className="mr-2 font-design">Select Location</p>
-              <img className="mr-4" src="arrow-down.png" alt="na" />
-            </div>
-
-            <div className="hidden md:block w-[2px] h-[25px] bg-[#E9ECEF]"></div>
-
-            <div className="flex items-center">
-              <p className="mr-2 font-design">Job Type</p>
-              <img className="mr-4" src="arrow-down.png" alt="na" />
-            </div>
-
-            <button className="py-2 bg-blue-600 text-white rounded build-resume hover:bg-white">
-              Search
-            </button>
-          </div> */}
-          <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-auto gap-4 relative">
+    <div className="flex flex-col md:flex-row items-start md:items-center w-full md:w-auto gap-4 relative">
       <div className="hidden md:block w-[2px] h-[25px] bg-[#E9ECEF]"></div>
 
       {/* Location Dropdown */}
@@ -96,7 +77,7 @@ export default function HomePage() {
           <img className="mr-4" src="arrow-down.png" alt="arrow" />
         </div>
         {locationOpen && (
-          <div className="absolute bg-white shadow rounded mt-1 z-10 w-40">
+          <div className="font-design absolute bg-white shadow rounded mt-1 z-10 w-40">
             {locations.map((loc) => (
               <div
                 key={loc}
@@ -125,7 +106,7 @@ export default function HomePage() {
           <img className="mr-4" src="arrow-down.png" alt="arrow" />
         </div>
         {jobTypeOpen && (
-          <div className="absolute bg-white shadow rounded mt-1 z-10 w-40">
+          <div className="font-design absolute bg-white shadow rounded mt-1 z-10 w-40">
             {jobTypes.map((type) => (
               <div
                 key={type}
