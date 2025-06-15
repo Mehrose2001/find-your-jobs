@@ -27,7 +27,7 @@ function Navbar() {
           <div className="hidden lg:flex items-center ml-3">
             <div className="relative">
               <img className="absolute top-2 left-2 z-10" width={16} height={16} src="search icon.png" alt="search" />
-              <input className="pl-8 pr-4 py-1 border rounded search-field" placeholder="Search" type="text" />
+              <input className="pl-8 pr-4 py-1 border rounded search-field" placeholder="Search..." type="text" />
             </div>
             <button className="ml-3 build-resume">Resume Builder</button>
             <img className="mx-2 h-[38px] w-[38px]" src="login-profile.png" alt="profile" />
